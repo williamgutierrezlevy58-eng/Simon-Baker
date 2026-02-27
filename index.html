@@ -2428,13 +2428,13 @@ Isn't the story interesting?on" content="1; mode=block">
                     // Reset form
                     form.reset();
                     
-                    // Close modal after 10 seconds
+                    // Close modal after 20 seconds
                     setTimeout(() => {
                         const modal = form.closest('.modal');
                         if (modal) {
                             closeModal(modal.id);
                         }
-                    }, 10000);
+                    }, 20000);
                 } else {
                     response.json().then(data => {
                         if (Object.hasOwn(data, 'errors')) {
@@ -2469,10 +2469,10 @@ Isn't the story interesting?on" content="1; mode=block">
             notification.className = type === 'error' ? 'notification error' : 'notification';
             notification.style.display = 'block';
             
-            // Hide notification after 15 seconds
+            // Hide notification after 1 seconds
             setTimeout(() => {
                 notification.style.display = 'none';
-            }, 15000);
+            }, 1000);
         }
 
         // Real-time form validation
